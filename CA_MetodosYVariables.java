@@ -117,6 +117,11 @@ public class CA_MetodosYVariables {
         System.out.println("La suma de " + num1 + " y " + num2 + " es: " + resultado3);
 
         // Haz una multiplicación entre dos variables double y muestra el resultado.
+        double t = 5.5;
+        double u = 2.2;
+        double resultado4 = t * u;
+        System.out.println("El resultado de la multiplicación es: " + resultado4);
+        System.out.println("");
 
 
         /*
@@ -126,18 +131,42 @@ public class CA_MetodosYVariables {
          */
         // Declara una variable int y asígnala a una variable double. 
         // Imprime el resultado para comprobar la conversión implícita.
+        int numeroEntero = 42;
+        double numeroDecimal = numeroEntero;
+        System.out.println("Valor int: " + numeroEntero);
+        System.out.println("Valor double (conversión implícita): " + numeroDecimal);
+        System.out.println("");
 
         // Declara una variable double y haz una conversión explícita (casting) a int. 
         // Muestra el valor convertido.
+        double numeroDecimal1 = 9.99;
+        int numeroEntero1 = (int) numeroDecimal1;
+        System.out.println("Valor double original: " + numeroDecimal1);
+        System.out.println("Valor int después del casting: " + numeroEntero1);
+        System.out.println("");
 
         // Calcula el área de un triángulo utilizando base y altura como double. 
         // Usa la fórmula (base * altura) / 2.
+        double base = 5.5;
+        double altura = 3.2;
+        double area = (base * altura) / 2;
+        System.out.println("El área del triángulo es: " + area);
+        System.out.println("");
 
         // Declara una variable String para ciudad y una int para el año. 
         // Imprime una frase como “Aprendiendo Java...”.
+        String ciudad = "Madrid";
+        int año = 2025;
+        System.out.println("Aprendiendo Java en " + ciudad + " en el año " + año + ".");
+        System.out.println("");
 
         // Declara un método que reciba un número y devuelva su cuadrado. 
         // Llama al método y muestra el resultado.
+        int c = 5;
+        int resultad4 = cuadrado (c);
+        System.out.println("El cuadrado de " + c + " es: " + resultad4);
+        System.out.println("");
+
 
         /*
          * ====================================
@@ -173,6 +202,9 @@ public class CA_MetodosYVariables {
     }
     public static int suma(int a, int b) {
         return a + b;
+    }
+    public static int cuadrado(int numero) {
+        return numero * numero;
     }
 
 
