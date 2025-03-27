@@ -65,8 +65,8 @@ public class D_Condiciones {
     public static void ejercicio6() {
         int num6 = 25;
         if (num6 >= 18) {
-            System.out.println("esta persona es mayor de edad: " + num6);
-        } 
+            System.out.println("esta persona es mayor de edad su numero es: " + num6);
+        }
 
 
     }
