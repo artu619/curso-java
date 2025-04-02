@@ -5,14 +5,14 @@
  * Solo puede haber una clase pública por archivo, ya lo veremos.
  * En un proyecto, la clase principal tendrá el método main()
  * El método main siempre se escribe de la misma manera.
- * 
+ *
  * Dentro del método main() haz que el programa pueda mostrar por pantalla
  * "Hola Mundo"
- * 
+ *
  * ====RECORDATORIOS====
  * La clase necesita las palabras clave public class <nombre>
  * El scope de la clase va entre llaves {}
- * 
+ *
  * El método main requiere las palabras clave public static void <nombre>
  * Los parámetros de main son una array de String que recibe como nombre args
  * Los parámetros va entre paréntesis ()
