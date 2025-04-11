@@ -62,33 +62,45 @@ import java.util.*;
 public class ENTREGABLE_Blackjack {
 
     // Variables de clase
-    static String[] deck = new String[52];
-    static int deckIndex = 0;
-    private static final String[] PALOS = {"♠", "♥", "♦", "♣"};
-    private static final String[] RANGOS = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
-    private static final List<Map<String, String>> mazo = new ArrayList<>();
-    private static final Scanner scanner = new Scanner(System.in);
-    
+    static final String[] PALOS = {"♠", "♥", "♦", "♣"};
+    static final String[] RANGOS = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
+    static ArrayList<String> mazo;
+    static ArrayList<String> manoJugador;
+    static ArrayList<String> manoDealer;
+
 
 
     // método main
     public static void main(String[] args) {
 
         
-        crearMazo();
-        Collections.shuffle(mazo);
-        jugarBlackjack();
-        // Inicializar y barajar el mazo
-        private static void crearMazo() {
-            for (String palo : PALOS) {
-                for (String rango : RANGOS) {
-                    Map<String, String> carta = new HashMap<>();
-                    carta.put("rango", rango);
-                    carta.put("palo", palo);
-                    mazo.add(carta);
-                }
+    Scanner scanner = new Scanner(System.in);
+        
+        while (true) {
+            System.out.println("╔══════════════════╗");
+            System.out.println("║ ♥♣🂠BLACKJACK🂡♠♦  ║");
+            System.out.println("╠══════════════════╣");
+            System.out.println("║1. Jugar          ║");
+            System.out.println("║2. Salir          ║");
+            System.err.println("╚══════════════════╝");
+            System.out.print("Selecciona una opcion:"  );
+            String opcion = scanner.nextLine();
+            
+            
+            if (opcion.equals("1")) {
+                jugarPartida();
+            } else if (opcion.equals("2")) {
+                System.out.println("Gracias por jugar. ¡Hasta la próxima!");
+                break;
+            } else {
+                System.out.println("Opción no válida, intenta de nuevo.");
             }
         }
+        scanner.close();
+        
+    }
+
+        
         
         // Manos de jugador y dealer (se asume máximo 12 cartas por mano)
         
@@ -146,4 +158,3 @@ public class ENTREGABLE_Blackjack {
     
     // Imprime las cartas de una mano
     
-}

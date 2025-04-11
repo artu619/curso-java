@@ -67,6 +67,7 @@ public class Blackjack {
     static ArrayList<String> manoJugador;
     static ArrayList<String> manoDealer;
 
+//un menu para haceder la juego o salir de el
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
@@ -92,7 +93,7 @@ public class Blackjack {
         }
         scanner.close();
     }
-
+    //montrar la manos de los participantes 
     public static void jugarPartida() {
         mazo = new ArrayList<>();
         manoJugador = new ArrayList<>();
@@ -109,7 +110,7 @@ public class Blackjack {
         
         determinarResultado();
     }
-
+    //creador de mazos y repartir al jugador 
     public static void crearMazo() {
         for (String palo : PALOS) {
             for (String rango : RANGOS) {
@@ -128,16 +129,16 @@ public class Blackjack {
         manoDealer.add(mazo.remove(0));
         manoDealer.add(mazo.remove(0));
     }
-    
+    //motras mano de jugador y daeler
     public static void mostrarManoJugador() {
         System.out.println("Mano del Jugador: " + manoJugador);
         System.out.println("Valor total: " + calcularValorMano(manoJugador));
     }
     
     public static void mostrarManoDealer() {
-        System.out.println("Mano del Dealer: " + manoDealer.get(0) + " y una carta oculta");
+        System.out.println("Mano del Dealer: " + manoDealer.get(0) + " , [??]");
     }
-    
+    //calcular la mano del jugar sacado las suma de todas la cartas en la mano
     public static int calcularValorMano(ArrayList<String> mano) {
         int valorTotal = 0;
         int ases = 0;
@@ -161,7 +162,7 @@ public class Blackjack {
         
         return valorTotal;
     }
-    
+    //sitema de pwdido de carta si el jugador no se a pasado de 21
     public static void turnoJugador() {
         Scanner scanner = new Scanner(System.in);
         
@@ -187,7 +188,7 @@ public class Blackjack {
             }
         }
     }
-    
+    //mano del daeler y si el total de puntos no es mayor a 17 pide cartas
     public static void turnoDealer() {
         System.out.println("Es el turno del dealer.");
         System.out.println("Mano del Dealer: " + manoDealer);
@@ -202,7 +203,7 @@ public class Blackjack {
             System.out.println("El dealer se ha pasado de 21, ¡el jugador gana!");
         }
     }
-    
+    //resultado de la partida
     public static void determinarResultado() {
         int valorJugador = calcularValorMano(manoJugador);
         int valorDealer = calcularValorMano(manoDealer);

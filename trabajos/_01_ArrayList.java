@@ -236,13 +236,13 @@ public class _01_ArrayList {
         nombres.add("Mario");
         nombres.add("Raquel");
 
-        ejercicio1();
-        ejercicio2();
-        ejercicio3();
-        ejercicio4();
-        ejercicio5();
-        ejercicio6();
-        ejercicio7();
+        // ejercicio1();
+        // ejercicio2();
+        // ejercicio3();
+        // ejercicio4();
+        // ejercicio5();
+        // ejercicio6();
+        // ejercicio7();
         ejercicio8();
     }
 
